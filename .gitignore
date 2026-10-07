@@ -1,0 +1,51 @@
+## .NET build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Ll]og/
+[Ll]ogs/
+TestResults/
+*.user
+*.suo
+*.userprefs
+*.nupkg
+*.snupkg
+
+## IDEs
+.idea/
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+*.swp
+*.DotSettings.user
+
+## Local databases (e.g. SQLite)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+
+## Secrets and local certificates
+.env
+.env.*
+*.pfx
+*.key
+*.pem
+appsettings.*.local.json
+
+## Angular / Node (client)
+node_modules/
+dist/
+.angular/
+out-tsc/
+coverage/
+npm-debug.log*
+yarn-error.log*
+
+## OS files
+.DS_Store
+Thumbs.db
+desktop.ini
