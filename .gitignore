@@ -11,6 +11,10 @@ TestResults/
 *.userprefs
 *.nupkg
 *.snupkg
+*.rsuser
+[Pp]ublish/
+*.pubxml
+*.publishproj
 
 ## IDEs
 .idea/
@@ -31,6 +35,7 @@ TestResults/
 ## Secrets and local certificates
 .env
 .env.*
+!.env.example
 *.pfx
 *.key
 *.pem
@@ -44,6 +49,13 @@ out-tsc/
 coverage/
 npm-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+.eslintcache
+.sass-cache/
+
+## Angular production build served by the API
+API/wwwroot/
 
 ## OS files
 .DS_Store
