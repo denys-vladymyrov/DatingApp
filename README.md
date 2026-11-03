@@ -71,7 +71,7 @@ dotnet ef database update --project API
 dotnet run --project API
 ```
 
-The API is available at **https://localhost:7276**.
+The API is available at **https://localhost:5001**.
 
 To run with hot reload:
 
@@ -89,7 +89,7 @@ dotnet watch --project API
 Example:
 
 ```bash
-curl -k https://localhost:7276/api/members
+curl -k https://localhost:5001/api/members
 ```
 
 ## Database

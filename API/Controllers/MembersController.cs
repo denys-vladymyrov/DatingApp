@@ -9,13 +9,13 @@ namespace API.Controllers
     [ApiController]
     public class MembersController(AppDbContext context) : ControllerBase
     {
-        [HttpGet] // https://localhost:7276/api/members
+        [HttpGet] // https://localhost:5001/api/members
         public ActionResult<IReadOnlyList<AppUser>> GetMembers()
         {
             return context.Users.ToList();
         }
         
-        [HttpGet("{id}")] // https://localhost:7276/api/members/bob-id
+        [HttpGet("{id}")] // https://localhost:5001/api/members/bob-id
         public ActionResult<AppUser> GetMember(string id)
         {
             var member = context.Users.Find(id);
