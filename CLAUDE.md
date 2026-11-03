@@ -16,7 +16,7 @@ Run from the repo root (or target `API/API.csproj` directly):
 
 ```bash
 dotnet build                      # build the solution
-dotnet run --project API          # runs the "https" launch profile at https://localhost:7276
+dotnet run --project API          # runs the "https" launch profile at https://localhost:5001
 dotnet watch --project API        # run with hot reload
 dotnet ef database update --project API                                  # apply migrations
 dotnet ef migrations add <Name> --project API -o Data/Migrations         # add a migration
