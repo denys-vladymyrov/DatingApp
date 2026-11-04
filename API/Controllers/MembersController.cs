@@ -1,28 +1,25 @@
 using API.Data;
 using API.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers
+namespace API.Controllers;
+
+public class MembersController(AppDbContext context) : BaseApiController
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class MembersController(AppDbContext context) : ControllerBase
+    [HttpGet] // https://localhost:5001/api/members
+    public ActionResult<IReadOnlyList<AppUser>> GetMembers()
     {
-        [HttpGet] // https://localhost:5001/api/members
-        public ActionResult<IReadOnlyList<AppUser>> GetMembers()
-        {
-            return context.Users.ToList();
-        }
-        
-        [HttpGet("{id}")] // https://localhost:5001/api/members/bob-id
-        public ActionResult<AppUser> GetMember(string id)
-        {
-            var member = context.Users.Find(id);
+        return context.Users.ToList();
+    }
+    
+    [HttpGet("{id}")] // https://localhost:5001/api/members/bob-id
+    public ActionResult<AppUser> GetMember(string id)
+    {
+        var member = context.Users.Find(id);
 
-            if (member == null) return NotFound();
+        if (member == null) return NotFound();
 
-            return member;
-        }
+        return member;
     }
 }
+
