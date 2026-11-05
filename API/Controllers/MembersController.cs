@@ -1,5 +1,6 @@
 using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -12,6 +13,7 @@ public class MembersController(AppDbContext context) : BaseApiController
         return context.Users.ToList();
     }
     
+    [Authorize]
     [HttpGet("{id}")] // https://localhost:5001/api/members/bob-id
     public ActionResult<AppUser> GetMember(string id)
     {
