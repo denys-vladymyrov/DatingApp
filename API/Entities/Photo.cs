@@ -10,6 +10,7 @@ public class Photo
     public string? PublicId { get; set; }
 
     // Navigation property
+    [JsonIgnore]
     public Member Member { get; set; } = null!;
     public string MemberId { get; set; } = null!;
 }
